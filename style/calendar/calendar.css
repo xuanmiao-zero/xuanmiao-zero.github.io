@@ -1,0 +1,161 @@
+/* 默认字体大小为 100px 来计算 rem 的值 */
+html {font-size: 76px;}
+/* 放大 1.1 倍的设备 */
+@media (min-width: 751px), (min-width: 376px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 320px) and (-webkit-min-device-pixel-ratio: 3) {
+    html {
+        font-size: 76px;
+    }
+}
+/* 放大 1.2 倍的设备 */
+@media (min-width: 1081px), (min-width: 541px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 415px) and (-webkit-min-device-pixel-ratio: 3) {
+    html {
+        font-size: 76px;
+    }
+}
+/* 以上内容是根据 html 标签的文字改变页面中元素的大小 */
+
+#calendar{
+    float: right;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 70px;
+    border: 1px solid transparent;
+    padding: 0.2rem;
+    width: 3.6rem;
+    height: 5.5rem;
+    font: 0.15rem/30px 微软雅黑;
+    text-align: left;
+    color: #CEDFE6;
+    background: #075C7D;
+    opacity: 0.8;
+}
+#calendar:hover{
+    transition: .2s ease-in-out;
+    box-shadow: 0 0 0.1rem 0 rgba(7,91,125,0.5);
+}
+#calendar .time{
+    margin: 0.1rem auto auto -0.06rem;
+    font:700 0.4rem/40px microsoft yahei;
+    color: #eee;
+}
+#calendar .date{
+    color: #59D1FF;
+    font: 400 0.15rem/10px microsoft yahei;
+}
+#calendar .top-box h3{
+    display: inline-block;
+    font: 400 0.18rem/0.24rem microsoft yahei;
+    width: 2.2rem;
+}
+#calendar .top-box div{
+    display: inline-block;
+    font: 400 0.22rem/0.24rem microsoft yahei;
+    width: 0.44rem;
+    text-align: right;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+#calendar .top-box div:hover{
+    color: #1EC0FF;
+}
+#calendar .day-number{
+    margin:0 -0.17rem ;
+}
+#calendar .day-number span{
+    display: inline-block;
+    text-align: center;
+    line-height: 0.41rem;
+    color: #fff;
+}
+#calendar .week-day-number{
+    margin-left: 0.04rem;
+}
+#calendar .week-day-number span{
+    width: 0.45rem;
+    font-size: 0.12rem;
+}
+#calendar .date-day-number{
+    height: 2.78rem;
+    overflow: hidden;
+}
+#calendar .date-day-number span{
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    width: 0.5rem;
+    font: 0.2rem/0.41rem microsoft yehei;
+}
+#calendar .date-day-number span:hover{
+    border: 2px solid #85ACBC;
+}
+#calendar .date-day-number .last-month{
+    margin-top: -2.74rem;
+}
+
+#calendar .set-btn{
+    width: 1.2rem;
+    line-height: 0.3rem;
+    color: #59D1FF;
+    text-decoration: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+}
+#calendar .set-btn:hover{
+    /*color: #30A9DE;80D4F6 00DFFC 1EC0FF 45D9FD*/
+    color: #1EC0FF;
+}
+#calendar .popup-window{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6rem;
+    height: 3rem;
+    background: #007EAE;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+#calendar .popup-window h2{
+    margin: 0.2rem 0 auto 0.3rem;
+    font: 400 0.2rem/30px microsoft yahei;
+}
+#calendar .popup-window h4{
+    margin:0 0.3rem;
+    font: 400 0.16rem/30px microsoft yehei;
+}
+#calendar .popup-window select{
+    margin: auto 0 0.2rem 0.3rem;
+    padding: 0.02rem 0.06rem;
+    outline: 0.02rem solid #66B2CE;
+    border: none;
+    width: 1rem;
+    font: 400 0.16rem/30px microsoft yehei;
+    text-align: center;
+    background: #004C68;
+    color: #fff;
+}
+#calendar .popup-window select:hover{
+    background: #003246;
+}
+#calendar .popup-window .operation-btns {
+    float: right;
+    margin: 0.4rem 0 auto auto;
+    width: 2.4rem;
+}
+#calendar .popup-window .operation-btns div{
+    display: inline-block;
+    margin: 0.1rem;
+    padding: 0 0.2rem;
+    border: 1px solid #fff;
+    line-height: 24px;
+    cursor: pointer;
+}
+#calendar .popup-window .operation-btns div:hover{
+    opacity: 0.9;
+}
+#calendar .popup-window .operation-btns div.default{
+    background: #32B5E7;
+}
