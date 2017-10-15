@@ -1,302 +1,512 @@
 <!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>-->
 <html lang="en">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">               <!--?-->
     <meta charset="UTF-8">
-    <meta name="author" content="轩邈">
-    <meta name="copyright" content="轩邈">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <!-- 网站SEO -->
-    <title>轩邈</title>
-    <meta name="keywords" content="轩邈 xuanmiao xuanmiao.com">
-    <meta name="description" content="轩邈 | 猎奇蜗牛">
-    <!-- 标题栏logo图标 -->
-    <link rel="icon" href="style/image/icon/favicon_logo.ico" type="image/x-icon">
-    <!-- 收藏夹logo图标 -->
-    <link rel="shortcut icon" href="style/image/icon/favicon_logo.ico" type="image/x-icon">
-    <!-- 引入css -->
-    <link rel="stylesheet" href="style/xuanmiao.css">
-    <link rel="stylesheet" href="style/calendar/calendar.css">
-    <!-- 引入css end -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>微云网页版-轩邈</title>
+    <meta name="Keywords"
+          content="QQ, 腾讯,微云, 分享, 网盘, 网络硬盘, U盘, 云存储, 传输, 存储, 同步, 备份, 拍照, 上传, 下载, 中转, 文件, 照片, 相册, 离线, 传文件, wifi, cloud, 微云网页版, weiyun, weiyun web">
+    <meta name="Description" content="微云是腾讯公司为用户精心打造的一项智能云服务, 您可以通过微云方便地在手机和电脑之间同步文件、推送照片和传输数据。">
+    <link rel="shortcut icon" href="./style/image/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/css/index.css">
+    <script src="./js/data.js"></script>
+    <script src="./js/function_collection.js"></script>
+    <script src="./js/index.js"></script>
 </head>
-
 <body>
-    <!--顶部-->
-    <header>
-        <!-- 头像与搜索 -->
-        <section class="clear">
+<!-- 顶栏 s -->
+<header>
+    <div id="mainNormal" style="display: block">
 
-            <!-- 头像 -->
-            <hgroup>
-                <h1 class="left">
-                    <a  href="http://www.xuanmiao.wang/" title="轩邈树 | 猎奇蜗牛">
-                        <img src="style/image/eye_xuanmiao.png" alt="轩邈树">
+        <!-- logo s-->
+        <div class="logo">
+            <a href="./index.html" title="腾讯微云"></a>
+        </div>
+        <!-- logo e-->
+
+        <!--传输按钮 s-->
+        <div class="trans">
+            <i></i>
+        </div>
+        <!--传输按钮 e-->
+
+        <!--搜索框 s-->
+        <div class="search-wrap">
+            <i></i>
+            <input class="search" type="text" placeholder=" 输入文件名" aria-label="输入文件名并按下回车进行搜索">
+            <a class="close" href="javascript:" aria-label="清空的搜索框">
+                <i class="icon icon-close"></i>
+            </a>
+        </div>
+        <!--搜索框 e-->
+
+        <div class="view-sort-wrap">
+            <div class="view-sort-box">
+                <!--视图切换按钮 s-->
+                <div class="view-switch">
+                    <a class="list-view cur" href="javascript:" title="列表视图">
+                        <i class="icon icon-list"></i>
                     </a>
-                    <span class="blog-title">轩邈树</span>
-                    <span class="blog-title">猎奇蜗牛</span>
-                </h1>
-            </hgroup>
-            <!-- 头像 end -->
-
-            <!-- search -->
-            <form class="search-form right" method="get" action="http://www.xuanmiao.wang/">
-                <input class="search-input left" placeholder="搜索..." type="text">
-                <input title="搜搜看" type="submit" value="">
-            </form>
-            <!-- search end -->
-        </section>
-        <!-- LOGO与搜索 end -->
-
-        <!-- 导航菜单 -->
-        <nav class="header-nav clear">
-            <ul class="menu">
-                <li class="menu-item">
-                    <a href="javascript:">轩邈</a>
-                </li>
-                <li class="menu-item">
-                    <a href="subpage/gallery/gallery.html">作品</a>
-                </li>
-                <li class="menu-item">
-                    <a href="javascript:">利器</a>
-                </li>
-                <li class="menu-item">
-                    <a href="javascript:">看点</a>
-                </li>
-                <li class="menu-item">
-                    <a href="javascript:">有趣</a>
-                </li>
-                <li class="menu-item">
-                    <a href="javascript:">上墙</a>
-                </li>
-                <li class="menu-item">
-                    <a href="javascript:">关于</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- 导航菜单 end -->
-    </header>
-    <!--顶部 end-->
-
-    <!-- 主要内容 -->
-    <div class="main-content clear">
-
-        <!-- 文章 -->
-        <div class="article-box">
-
-            <!-- 轮播图 -->
-            <section class="infinite-gallery">
-                <div class="pic-box"></div>
-                <div class="toggle-btn">
-                    <div class="prev-pic"></div>
-                    <div class="next-pic"></div>
+                    <a class="thumb-view" href="javascript:" title="缩略图视图">
+                        <i class="icon icon-thum"></i>
+                    </a>
                 </div>
-                <ol class="carousel-indicators">
-                </ol>
-            </section>
-            <!-- 轮播图 end -->
-            <div class = "article-wrap" id="article-top">
-            </div>
-            <!-- 页数 -->
-            <div class="paging-box">
-                <ol class="paging" anchor="article-top">
-                    <li class="current-page">1</li>
-                </ol>
-            </div>
-            <!-- 页数 end -->
+                <!--视图切换按钮 e-->
 
-        </div>
-        <!-- 文章 end -->
-
-        <!-- 信息展示 -->
-        <div class="info-show">
-
-            <!-- 关于本站 -->
-            <section class="introduce-box">
-                <div class="title">
-                    <div class="icon-btn"></div>
-                    <span>关于本站</span>
+                <!--排序按钮 s-->
+                <div class="sort-switch">
+                    <a class="time-sort cur" href="javascript:" title="按时间排序">
+                        <i class="icon icon-time"></i>
+                    </a>
+                    <a class="alphabet-sort" href="javascript:" title="按字母排序">
+                        <i class="icon icon-alphabet"></i>
+                    </a>
                 </div>
-                <div class="line"></div>
-                <div class="pic-intro"></div>
-                <div class="introduce-text">
-                    <p class="introduce">扎根大地并向往天空，拥抱孤独去迎得涅槃。做一个爱美食，爱美景，爱运动的机器人。</p>
-                    <p class="right">——轩邈说（我说您听）</p>
-                </div>
-                <div class="contact">
-                    <a class="rss"></a>
-                    <a class="weibo"></a>
-                    <a class="zhihu"></a>
-                    <a class="douban"></a>
-                    <a class="youku"></a>
-                    <a class="baiduyun"></a>
-                    <a class="twitter"></a>
-                    <a class="facebook"></a>
-                    <a class="instagram"></a>
-                    <a class="Dribbble"></a>
-                    <a class="Deviantart"></a>
-                    <a class="zhifubao"></a>
-                </div>
-            </section>
-            <!-- 关于本站 end -->
-
-        </div>
-        <!-- 信息展示 end -->
-
-        <!-- 日历 -->
-        <div id="calendar">
-            <h1 class="time"> 00:00:00</h1>
-            <h2 class="date">1970年01月01日, 星期二</h2>
-            <div class="top-box">
-                <h3 class="year-and-month">2017年8月</h3>
-                <div class="prev" title="上一月">▲</div>
-                <div class="next" title="下一月">▼</div>
-            </div>
-            <div class="day-number">
-                <div class="week-day-number">
-                    <span>日</span>
-                    <span>一</span>
-                    <span>二</span>
-                    <span>三</span>
-                    <span>四</span>
-                    <span>五</span>
-                    <span>六</span>
-                </div>
-                <div class="date-day-number">
-                    <div class="last-month"></div>
-                    <div class="current-month"></div>
-                    <div class="next-month"></div>
-                </div>
-            </div>
-
-            <div class = "set-btn" href="">日期和时间设置</div>
-            <div class="popup-window">
-                <h2>更改日期和时间</h2>
-                <h4>日期</h4>
-                <select name="year" id="yearSelect" title="yearSelect"></select>
-                <select name="month" id="monthSelect" title="month">
-                    <option value="january">一月</option>
-                    <option value="february">二月</option>
-                    <option value="march">三月</option>
-                    <option value="april">四月</option>
-                    <option value="may">五月</option>
-                    <option value="june">六月</option>
-                    <option value="july">七月</option>
-                    <option value="august">八月</option>
-                    <option value="september">九月</option>
-                    <option value="october">十月</option>
-                    <option value="november">十一月</option>
-                    <option value="december">十二月</option>
-                </select>
-                <select name="date-day" id="dateDaySelect" title="date-day"></select>
-                <h4>时间</h4>
-                <select name="hour" id="hourSelect" title="hour"></select>
-                <select name="minute" id="minuteSelect" title="minute"></select>
-                <div class="operation-btns">
-                    <div class="change default">更改</div>
-                    <div class="cancel">取消</div>
-                </div>
+                <!--排序按钮 e-->
             </div>
         </div>
-        <!-- 日历 end -->
+
+        <!--添加按钮 s-->
+        <div class="add-wrap mod-upload">
+            <input id="mod-upload" type="file" style="display: none;">
+            <label class="file-upload" for="mod-upload">
+                <span class="add-btn">
+                    <i class="icon icon-add"></i>
+                    <span class="add-btn-txt">添加</span>
+                </span>
+
+                <!--操作按钮框-->
+                <div class="operations-box">
+                    <ul class="upload-dropdown clearfix">
+                        <li class="upload-item" data-action="upload_files" style="">
+                            <div class="inner">
+                                <b class="icon icon-upload icon-upload-file"></b>
+                                <p class="txt" tabindex="-1">上传文件</p>
+                            </div>
+                        </li>
+                        <li class="upload-item" data-action="upload_folder" style="">
+                            <div class="inner">
+                                <b class="icon icon-upload icon-upload-dir"></b>
+                                <p class="txt" tabindex="-1">上传文件夹</p>
+                            </div>
+                        </li>
+                        <li class="upload-item" data-action="offline_download" style="">
+                            <div class="inner">
+                                <b class="icon icon-upload icon-offline-download"></b>
+                                <p class="txt" tabindex="-1">离线下载</p>
+                            </div>
+                        </li>
+                        <li class="upload-item create-folder" data-action="create_folder" style="">
+                            <div class="inner">
+                                <b class="icon icon-upload icon-create-dir"></b>
+                                <p class="txt" tabindex="-1">创建文件夹</p>
+                            </div>
+                        </li>
+                        <li class="upload-item" data-action="add_note" style="">
+                            <div class="inner">
+                                <b class="icon icon-upload icon-add-note"></b>
+                                <p class="txt" tabindex="-1">添加笔记</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <b class="bubble-arrow-border"></b>
+                    <b class="bubble-arrow"></b>
+                </div>
+                <!--添加按钮 e-->
+            </label>
+        </div>
+
     </div>
-    <!-- 主要内容 end -->
+    <div id="mainSelect" style="display: none">
+        <!-- logo s-->
+        <div class="logo">
+            <a href="./index.html" title="腾讯微云"></a>
+        </div>
+        <!-- logo e-->
+        <div class="select-btn-wrap">
+            <a href="javascript: void(0);" class="select-btn" data-action="edit_cancel_all">取消选择</a>
+        </div>
+        <div class="edit-select j-edit-count">
+            <p>选择了<span class="j-edit-count-text">0</span>项</p>
+        </div>
 
-    <!--底部-->
-    <footer>
-        <div class="footer-menu-wrap">
-            <ul class="footer-menu">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">博客</a></li>
-                <li><a href="#">关于</a></li>
-                <li><a href="#">投稿</a></li>
-                <li><a href="#">上墙</a></li>
+        <!--操作栏-->
+        <div class="mod-edit-bar">
+            <ul>
+                <li class="edit-item share"><i class="icon icon-share"></i><span class="text">分享</span></li>
+                <li class="edit-item download"><i class="icon icon-download"></i><span class="text">下载</span></li>
+                <li class="edit-item delete"><i class="icon icon-trash"></i><span class="text">删除</span></li>
+                <li class="edit-item has-more">
+                    <i class="icon icon-menu-more"></i>
+                    <div class="mod-bubble-dropdown with-border top-right edit-bubble-dropdown">
+                        <ul class="list-dropdown">
+                            <li class="item">
+                                <button class="btn-link move-to">移动到</button>
+                            </li>
+                            <li class="item">
+                                <button class="btn-link rename">重命名</button>
+                            </li>
+                            <li class="item">
+                                <button class="btn-link move-to-safe">移入保险箱</button>
+                            </li>
+                        </ul>
+                        <b class="bubble-arrow-border"></b>
+                        <b class="bubble-arrow"></b>
+                    </div>
+                </li>
             </ul>
         </div>
-        <div class="footer-widgets-wrap">
-            <div class="footer-widgets">
-                <!-- 近期文章 -->
-                <article class="footer-widgets-item recent-article">
-                    <h3 class="footer-widgets-title"><a href="javascript:">近期文章</a></h3>
-                    <ul class="footer-widgets-content">
-                        <li><a href="javascript:">计算器功能逐步实现过程</a></li>
-                        <li><a href="javascript:">闭包的理解与总结</a></li>
-                        <li><a href="javascript:">CSS选择器参考与记录</a></li>
-                        <li><a href="javascript:">元素垂直居中的实现方法</a></li>
+
+    </div>
+</header>
+<!-- 顶栏 e -->
+
+<div class="layout-body">
+    <div class="layout-body-inner">
+        <!-- 导航栏 s -->
+        <nav class="layout-aside">
+            <!--用户头像 s-->
+            <div class="user">
+                <div class="user-avatar">
+                </div>
+            </div>
+            <!--用户头像 e-->
+
+            <!--菜单 s-->
+            <div class="mod-menu">
+                <!--开通会员-->
+                <div class="vip-box">
+                    <a href="javascript: void(0);" class="vip-btn"><span class="j-vip-txt">开通</span>会员</a>
+                </div>
+
+                <!-- 最近s -->
+                <div class="menu-item">
+                    <ul class="menu-list">
+                        <li>
+                            <a href="javascript:">
+                                <i class="icon icon-ren"></i>
+                                <span class="menu-tit">最近</span>
+                            </a>
+                        </li>
                     </ul>
-                </article>
-                <!-- 近期文章 end-->
+                </div>
+                <!-- 最近e -->
 
-                <!-- 热门文章 -->
-                <article class="footer-widgets-item hot-article">
-                    <h3 class="footer-widgets-title"><a href="javascript:">热门文章</a></h3>
-                    <ul class="footer-widgets-content">
-                        <li><a href="javascript:">计算器功能逐步实现过程</a></li>
-                        <li><a href="javascript:">闭包的理解与总结</a></li>
-                        <li><a href="javascript:">CSS选择器参考与记录</a></li>
-                        <li><a href="javascript:">元素垂直居中的实现方法</a></li>
+                <!-- 文件s -->
+                <div class="menu-item">
+                    <div class="menu-item-hd">
+                        <h3 class="tit">文件</h3>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="cur" data-mod="disk" data-op="NAV_DISK">
+                            <a href="./index.html"><i class="icon icon-all"></i><span class="menu-tit">全部</span></a>
+                        </li>
+                        <li data-mod="doc" data-op="NAV_DOC">
+                            <a href="javascript: void(0);"><i class="icon icon-doc"></i><span class="menu-tit">文档</span></a>
+                        </li>
+                        <li data-mod="album" data-op="NAV_ALBUM">
+                            <a href="javascript: void(0);"><i class="icon icon-pic"></i><span class="menu-tit">图片</span></a>
+                        </li>
+                        <li data-mod="video" data-op="NAV_VIDEO">
+                            <a href="javascript: void(0);"><i class="icon icon-video"></i><span
+                                    class="menu-tit">视频</span></a>
+                        </li>
+                        <li data-mod="note" data-op="NAV_NOTE">
+                            <a href="javascript: void(0);"><i class="icon icon-note"></i><span
+                                    class="menu-tit">笔记</span></a>
+                        </li>
+                        <li data-mod="audio" data-op="NAV_AUDIO">
+                            <a href="javascript: void(0);"><i class="icon icon-music"></i><span
+                                    class="menu-tit">音乐</span></a>
+                        </li>
                     </ul>
-                </article>
-                <!-- 热门文章 end-->
+                </div>
+                <!-- 文件e -->
 
-                <!-- 友情链接 -->
-                <article class="footer-widgets-item friends-link">
-                    <h3 class="footer-widgets-title"><a href="javascript:">友情链接</a></h3>
-                    <ul class="footer-widgets-content">
-                        <li><a href="http://www.runningcheese.com/">奔跑中的奶酪 有智,有趣,有爱</a></li>
-                        <li><a href="http://www.iconfont.cn/">阿里巴巴矢量图标库</a></li>
-                        <li><a href="http://www.zdfans.com/">zd423 - 软件分享平台领跑者</a></li>
-                        <li><a href="http://www.alloyteam.com/">AlloyTeam</a></li>
+                <!-- 照片s -->
+                <div class="menu-item">
+                    <div class="menu-item-hd">
+                        <h3 class="tit">照片</h3>
+                    </div>
+                    <div class="menu-item-bd">
+                        <ul class="menu-list">
+                            <li data-mod="photo_time" data-op="NAV_ALBUM">
+                                <a href="javascript: void(0);"><i class="icon icon-time"></i><span
+                                        class="menu-tit">时间</span></a>
+                            </li>
+                            <li style="display: none;">
+                                <a href="javascript: void(0);"><i class="icon icon-location"></i><span class="menu-tit">地点</span></a>
+                            </li>
+                            <li style="display: none;">
+                                <a href="javascript: void(0);"><i class="icon icon-tag"></i><span
+                                        class="menu-tit">标签</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 照片e -->
+
+                <!-- 我的s -->
+                <div class="menu-item">
+                    <div class="menu-item-hd">
+                        <h3 class="tit">我的</h3>
+                    </div>
+                    <div class="menu-item-bd">
+                        <ul class="menu-list">
+                            <li data-mod="safebox" data-op="NAV_SAFEBOX">
+                                <a href="javascript: void(0);"><i class="icon icon-add-safebox"></i><span
+                                        class="menu-tit">保险箱</span></a>
+                            </li>
+                            <!--<li data-mod="clipboard" data-op="NAV_CLIPBOARD">
+                                <a href="javascript: void(0);"><i class="icon icon-clip"></i><span class="menu-tit">剪贴板</span></a>
+                                <span data-id="clip-num" class="clip-num" style="display:none;"></span>
+                            </li>-->
+                            <li data-mod="share" data-op="NAV_SHARE">
+                                <a href="javascript: void(0);"><i class="icon icon-share"></i><span class="menu-tit">分享链接</span></a>
+                            </li>
+                            <li data-mod="recycle" data-op="NAV_RECYCLE">
+                                <a href="javascript: void(0);"><i class="icon icon-trash"></i><span
+                                        class="menu-tit">回收站</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 我的e -->
+            </div>
+            <!--菜单 e-->
+
+        </nav>
+        <!-- 导航栏 e -->
+        <!-- 内容栏 s -->
+        <div class="layout-main">
+            <header class="layout-main-hd">
+                <!--全选框和小竖线 s-->
+                <div class="mod-check">
+                    <i class="icon icon-checkbox icon-check-s"></i>
+                </div>
+                <!--全选框和小竖线 e-->
+
+                <!-- 面包屑导航 s -->
+                <div class="mod-breadcrumb">
+                    <ul class="breadcrumb clearfix">
+                        <li class="item cur" data-file-id="1_0">
+                            <a href="javascript:void(0)">微云</a>
+                        </li>
+                        <!--<li data-cur="" tabindex="0" hidefocus="on" class="item cur">-->
+                        <!--<i class="icon icon-bread-next"></i>-->
+                        <!--<a href="javascript:void(0)">模版</a>-->
+                        <!--</li>-->
                     </ul>
-                </article>
-                <!-- 友情链接 end-->
+                </div>
+                <!-- 面包屑导航 e -->
+            </header>
 
-                <!-- 热门标签 -->
-                <article class="footer-widgets-item popular-tags">
-                    <h3 class="footer-widgets-title"><a href="javascript:">热门标签</a></h3>
-                    <span>JavaScript</span>
-                    <span>CSS3</span>
-                    <span>EScript6</span>
-                    <span>HTML5</span>
-                    <span>React</span>
-                </article>
-                <!-- 热门标签 end-->
+            <!--文件列表 s-->
+            <div class="layout-main-bd">
+                <div class="mod-list-group">
+                    <!--空目录提示-->
+                    <div id="_disk_files_empty" class="empty-box" style="display: none;">
+                        <div class="status-inner">
+                            <i class="icon icon-nofile"></i>
+                            <h2 class="title">暂无文件</h2>
+                            <p class="txt">请点击右上角的“添加”按钮添加</p>
+                        </div>
+                    </div>
+                    <!--文件-->
+                    <ul class="list-group" style="display: block;">
+                        <li class="list-group-item ui-draggable ui-droppable ">
+                            <div class="item-tit">
+                                <div class="label">
+                                    <i class="icon icon-check-s"></i>
+                                </div>
+                                <div class="thumb">
+                                    <i class="icon icon-m icon-file-m"></i>
+                                </div>
+                                <div class="info">
+                                    <span class="tit" title="软件">软件</span>
+                                </div>
+                            </div>
+                            <div class="act-list-box">
+                                <span class="mod-act-list">
+                                    <a class="act-list" title="分享链接" href="#">
+                                        <i class="icon icon-share"></i>
+                                    </a>
+                                    <a class="act-list" title="下载" href="#">
+                                        <i class="icon icon-down"></i>
+                                    </a>
+                                    <a class="act-list" title="删除" href="#">
+                                        <i class="icon icon-trash"></i>
+                                    </a>
+                                    <a class="act-list" title="移动" href="#">
+                                        <i class="icon icon-move"></i>
+                                    </a>
+                                    <a class="act-list" title="重命名" href="#">
+                                        <i class="icon icon-rename"></i>
+                                    </a>
+                                    <a class="act-list" title="移动到保险箱" href="#">
+                                        <i class="icon icon-add-safebox"></i>
+                                    </a>
+                                </span>
+                                <span class="last-modify-time">
+                                    <span class="txt txt-time">2017-09-24 14:52</span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--缩略图列表-->
+                <div class="mod-thumb-group" style="display: none">
+                    <ul class="thumb-folder-list">
+                        <li class="thumb-folder-list-item">
+                            <div class="wrap">
+                                <i class="icon icon-m icon-file-m"></i>
+                                <span class="txt" title="QQ">QQ</span>
+                            </div>
+                            <i class="icon icon-check-m"></i>
+                        </li>
+                    </ul>
+                    <div class="mod-figure-list">
+                        <ul id="thumb_disk_files" class="figure-list clearfix">
+                            <li class="figure-list-item ui-draggable" style="width: 199px;"><!--当前态添加类名act-->
+                                <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
+                                <div class="figure-list-item-pic is-thumbnail" style="height: 149px;">
+                                    <i class="icon icon-l icon-doc-l">訊息</i>
+                                    <i class="icon icon-check-m"></i>
+                                </div>
+                                <div class="figure-list-item-txt">
+                                    <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
+                                    <p class="tit">
+                                        <i class="icon icon-s icon-doc-s"></i>
+                                        <span class="txt" data-quick-drag="" data-name="file_name"
+                                              title="前端面试笔试题汇总与详解（前端必看）.doc">前端面试笔试题汇总与详解（前端必看）.doc                </span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--文件列表 e-->
+        </div>
+        <!-- 内容栏 e -->
+    </div>
+</div>
+<!-- 框选 s -->
+<div class="mod-selectable-helper" style="display:none; left: 300px; top:250px; width:310px; height:130px"></div>
+<!-- 框选 e -->
+<!-- 选择移动位置 -->
+<!--<div data-no-selection="" class="select-move-position full-pop full-pop-medium"
+     style="display: block; position: fixed; left: 50%; top: 50%; margin-left: -226px; margin-top: -231.5px;"
+     role="alertdialog">
+    <h3 class="full-pop-header">
+        <div class="inner __title">选择存储位置</div>
+    </h3>
+    <div class="full-pop-content __content">
+        <div class="mod-dirbox">
+            <div class="dirbox-file">
+            <span class="fileimg">
+                <i data-id="icon" class="filetype icon icon-m icon-file-m"></i>
+            </span>
+                <span class="filename">图片                                    <em>等 14 个文件</em>                <br><em
+                        class="size"></em></span>
+            </div>
 
-                <!-- 订阅本站 -->
-                <article class="footer-widgets-item subscription-site">
-                    <h3 class="footer-widgets-title"><a href="javascript:">订阅本站</a></h3>
-                    <p>填写您的邮件地址，实时接收网站内容</p>
-                    <form action="">
-                        <input class="subscription-address" type="text" title="邮箱地址">
-                        <input class="subscription-btn" type="button" value="订阅">
-                    </form>
-                </article>
-                <!-- 订阅本站 end-->
+            <div class="dirbox-dirs">
+
+                <div class="dirbox-dir dirbox-curdir">
+                    <label>移动到：</label>
+                    <label id="_file_move_paths_to" title="微云\图片" tabindex="0">微云\图片</label>
+                </div>
+
+                <div data-id="tree-container" class="dirbox-tree" style="">
+                    <ul class="_tree dirbox-tree-body">
+                        <li data-level="0" id="_file_move_box_node_b4e2504df0a739ae12b58dcd423dce4a" data-dir-name="微云"
+                            data-file-id="b4e2504df0a739ae12b58dcd423dce4a"
+                            data-file-pid="b4e2504df338fdcb41c5dfa52b9ed888" data-loaded="true">
+                            <a href="#" hidefocus="on" style="padding-left:0px;" class="expand"><span class="ui-text"><i
+                                    class="_expander" data-tj-action="btn-adtag-tj" data-tj-value="52109"></i>微云</span></a>
+                            <ul class="dirbox-sub-tree" style="display: block;">
+                                <li data-level="1" id="_file_move_box_node_b4e2504d7f412613a1683b7a78b2d467"
+                                    data-dir-name="图片" data-file-id="b4e2504d7f412613a1683b7a78b2d467"
+                                    data-file-pid="b4e2504df0a739ae12b58dcd423dce4a">
+                                    <a href="#" hidefocus="on" style="padding-left:20px;"><span class="ui-text"><i
+                                            class="_expander" data-tj-action="btn-adtag-tj" data-tj-value="52109"></i>图片</span></a>
+                                </li>
+                                <li data-level="1" id="_file_move_box_node_b4e2504d0d1d449e475a62762a96049b"
+                                    data-dir-name="QQ" data-file-id="b4e2504d0d1d449e475a62762a96049b"
+                                    data-file-pid="b4e2504df0a739ae12b58dcd423dce4a">
+                                    <a href="#" hidefocus="on" style="padding-left:20px;"><span class="ui-text"><i
+                                            class="_expander" data-tj-action="btn-adtag-tj" data-tj-value="52109"></i>QQ</span></a>
+                                </li>
+                                <li data-level="1" id="_file_move_box_node_b4e2504db5fd98e93030dee4aff7a4fe"
+                                    data-dir-name="专业知识学习" data-file-id="b4e2504db5fd98e93030dee4aff7a4fe"
+                                    data-file-pid="b4e2504df0a739ae12b58dcd423dce4a">
+                                    <a href="#" hidefocus="on" style="padding-left:20px;"><span class="ui-text"><i
+                                            class="_expander" data-tj-action="btn-adtag-tj" data-tj-value="52109"></i>专业知识学习</span></a>
+                                </li>
+                                <li data-level="1" id="_file_move_box_node_b4e2504d06d71b98660cd389cc2cab06"
+                                    data-dir-name="软件" data-file-id="b4e2504d06d71b98660cd389cc2cab06"
+                                    data-file-pid="b4e2504df0a739ae12b58dcd423dce4a">
+                                    <a href="#" hidefocus="on" style="padding-left:20px;"><span class="ui-text"><i
+                                            class="_expander" data-tj-action="btn-adtag-tj" data-tj-value="52109"></i>软件</span></a>
+                                </li>
+                                <li data-level="1" id="_file_move_box_node_b4e2504d728a7174fcff97a406e52d67"
+                                    data-dir-name="QQ音乐" data-file-id="b4e2504d728a7174fcff97a406e52d67"
+                                    data-file-pid="b4e2504df0a739ae12b58dcd423dce4a">
+                                    <a href="#" hidefocus="on" style="padding-left:20px;"><span class="ui-text"><i
+                                            class="_expander" data-tj-action="btn-adtag-tj" data-tj-value="52109"></i>QQ音乐</span></a>
+                                </li>
+                                <li data-level="1" id="_file_move_box_node_b4e2504dff8bd21d3ae77e9718ce3053"
+                                    data-dir-name="群共享文件" data-file-id="b4e2504dff8bd21d3ae77e9718ce3053"
+                                    data-file-pid="b4e2504df0a739ae12b58dcd423dce4a">
+                                    <a href="#" hidefocus="on" style="padding-left:20px;"><span class="ui-text"><i
+                                            class="_expander" data-tj-action="btn-adtag-tj" data-tj-value="52109"></i>群共享文件</span></a>
+                                </li>
+                                <li data-level="1" id="_file_move_box_node_b4e2504dba9c89e59a72840e09b22a83"
+                                    data-dir-name="QQ邮箱" data-file-id="b4e2504dba9c89e59a72840e09b22a83"
+                                    data-file-pid="b4e2504df0a739ae12b58dcd423dce4a">
+                                    <a href="#" hidefocus="on" style="padding-left:20px;"><span class="ui-text"><i
+                                            class="_expander" data-tj-action="btn-adtag-tj" data-tj-value="52109"></i>QQ邮箱</span></a>
+                                </li>
+                                <li data-level="1" id="_file_move_box_node_b4e2504d77c92765438ca4ef1d170515"
+                                    data-dir-name="QQ网盘" data-file-id="b4e2504d77c92765438ca4ef1d170515"
+                                    data-file-pid="b4e2504df0a739ae12b58dcd423dce4a">
+                                    <a href="#" hidefocus="on" style="padding-left:20px;"><span class="ui-text"><i
+                                            class="_expander" data-tj-action="btn-adtag-tj" data-tj-value="52109"></i>QQ网盘</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
         </div>
+    </div>
+    <div class="full-pop-btn __buttons">
+        <span class="__msg infor err">文件已经在该文件夹下了</span>
+        <a data-id="button" data-btn-id="OK" class="g-btn g-btn-blue"
+           href="javascript:void(0);" disabled="disabled">
+            <span class="btn-inner disabled">确定</span>
+        </a>
+        <a data-id="button" data-btn-id="CANCEL" class="g-btn g-btn-gray" href="javascript:void(0);">
+            <span class="btn-inner">取消</span>
+        </a>
+    </div>
+    <a data-btn-id="CANCEL" href="javascript:void(0)" class="full-pop-close" title="关闭">×</a>
+</div>-->
+<script>
 
-        <!-- 网站相关信息 -->
-        <div class="footer-bottom-wrap">
-            <div class="webstie-info">
-                <span class="left">Copyright © 2017  </span>
-                <!--<span>备案号</span>-->
-                <span class="right">更新日期：2017年8月10日</span>
-            </div>
-        </div>
-        <!-- 网站相关信息 end -->
+</script>
 
-        <!-- 回到顶部 -->
-        <div id="back-to-top">
-            <a class="side top-btn" href="#" title="返回顶部">Top</a>
-        </div>
-        <!-- 回到顶部 end -->
-    </footer>
-    <!-- 底部 end -->
-
-    <!-- js引入 -->
-    <script src="js/jquery-3.1.1.js"></script>
-    <script src="js/animal_collection.js"></script>
-    <script src="js/xuanmiao.js"></script>
-    <script src="js/calendar.js"></script>
-    <!-- js引入 end -->
 </body>
 </html>
