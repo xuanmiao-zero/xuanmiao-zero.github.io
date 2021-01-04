@@ -1,3 +1,8 @@
+window.addEventListener('unload', () => {
+    console.log('xuanmiao unload')
+})
+
+
 /**
  * Created by xuanmiao on 2017/9/22.
  */
